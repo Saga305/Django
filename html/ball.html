@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(1, 2, 12);
+
+}
+
+
+.con1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.con2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.con3 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.con4 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.con1, .con2, .con3, .con4{
+width: 200px;
+height: 200px;
+}
+
+/* Styling for the circles */
+.con1 {
+    background-color: white;
+    border-radius: 50%;
+    animation-name: anim, move-to-center;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.con4 {
+    background-color: white;
+    border-radius: 50%;
+    animation-name: anim2,move-to-center-reverse;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.con2 {
+    background-color: white;
+    border-radius: 50%;
+    animation-name: anim2, move2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.con3 {
+    background-color: white;
+    border-radius: 50%;
+    animation-name: anim, move3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes anim {
+    0% {
+        background: linear-gradient(0deg, #ff7e5f, #feb47b);
+    }
+    25% {
+        background: linear-gradient(90deg, #6666b4, #feb47b);
+    }
+    50% {
+        background: linear-gradient(180deg, #ff7e5f, #95fe7b);
+    }
+    75% {
+        background: linear-gradient(270deg, #0e5b20, #feb47b);
+    }
+    100% {
+        background: linear-gradient(360deg, #ff7e5f, #feb47b);
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        background: linear-gradient(360deg, #e61f39, #feb47b);
+    }
+    25% {
+        background: linear-gradient(270deg, #0e5b20, #feb47b);
+    }
+    50% {
+        background: linear-gradient(180deg, #ff7e5f, #95fe7b);
+    }
+    75% {
+        background: linear-gradient(90deg, #6666b4, #feb47b);
+    }
+    100% {
+        background: linear-gradient(0deg, #b73414, #e6e92c);
+    }
+}
+
+@keyframes move-to-center {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+
+@keyframes move-to-center-reverse {
+    0% {
+        bottom: 0;
+        right: 0;
+    }
+    50% {
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+    100% {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+
+@keyframes move2 {
+    0% {
+        top: 0;
+        right: 0;
+    }
+    50% {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
+
+
+@keyframes move3 {
+    0% {
+        bottom: 0;
+        left: 0;
+    }
+    50% {
+        bottom: 50%;
+        left: 50%;
+        transform: translate(50%, -50%);
+    }
+    100% {
+        bottom: 0;
+        left: 0;
+    }
+}
+    </style>
+</head>
+<body>
+        <div class="con1 b1"></div>
+        <div class="con2 b2"></div>
+        <div class="con3 b3"></div>
+        <div class="con4 b4"></div>
+</body>
+</html>

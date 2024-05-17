@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body{
+    background-color: rgb(221, 243, 243);
+    width: 100%;
+    margin: auto;
+}
+
+.container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+  }
+
+.hourse, .minutes, .seconds, .colon {
+    margin: 1;
+    display: flex;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.time-container
+{
+    border: 2px solid black;
+    width: 200px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10%;
+    margin: 0 auto;
+    background-color: rgb(57, 207, 205);
+}
+
+.buttons{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#start,#stop,#reset{
+    margin:5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(255, 213, 0, 0.247);
+}
+
+#start:hover, #stop:hover, #reset:hover{
+    background-color: azure;
+}
+    </style>
+
+    <script>
+        window.onload = function() {
+    let sec = 0;
+    let min = 0;
+    let hrs = 0;
+    let amin = document.querySelector("#minutes");
+    let ahrs = document.querySelector("#hours");
+    let asec = document.querySelector("#seconds");
+    let startbtn = document.querySelector("#start");
+    let stopbtn = document.querySelector("#stop");
+    let resetbtn = document.querySelector("#reset");
+    let Interval;
+
+    function startTimer () {
+        sec++;
+        if (sec <= 9) {
+            asec.innerHTML = '0' + sec;
+        } else {
+            asec.innerHTML = sec;
+        }
+
+        if (sec > 59) {
+            min++;
+            amin.innerHTML = (min <= 9 ? '0' : '') + min;
+            sec = 0;
+            asec.innerHTML = '0' + sec;
+        }
+
+        if (min > 59) {
+            hrs++;
+            ahrs.innerHTML = (hrs <= 9 ? '0' : '') + hrs;
+            min = 0;
+            amin.innerHTML = '0' + min;
+        }
+    };
+
+    startbtn.onclick = () => {
+        clearInterval(Interval);
+        Interval = setInterval(startTimer, 1000); // 1000 milliseconds = 1 second
+    };
+
+    stopbtn.onclick = () => {
+        clearInterval(Interval);
+    };
+
+    resetbtn.onclick = () => {
+        clearInterval(Interval);
+        sec = 0;
+        min = 0;
+        hrs = 0;
+        asec.innerHTML = '00';
+        amin.innerHTML = '00';
+        ahrs.innerHTML = '00';
+    };
+};
+    </script>
+</head>
+<body>
+    <div class="container">stopwatch</div>
+    <div class="time-container">
+        <h1 id="hours">00</h1>
+        <h1 id="colon">:</h1>
+        <h1 id="minutes">00</h1>
+        <h1 id="colon">:</h1>
+        <h1 id="seconds">00</h1>
+    </div>
+
+    <div class="buttons">
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+        <button id="reset">reset</button>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
