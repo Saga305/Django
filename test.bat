@@ -3,7 +3,7 @@ REM This script navigates to the django_project directory, runs the Django devel
 REM and opens a specific page in Google Chrome
 
 REM Navigate to the project directory
-cd /d E:\django_project\my_project
+cd /d E:\django_project\my_project\Django
 
 REM Run the Django development server
 start python3.12.exe .\manage.py runserver
