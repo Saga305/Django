@@ -19,6 +19,7 @@ start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://12
 start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://127.0.0.1:8000/stop_watch
 start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://127.0.0.1:8000/login
 start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://127.0.0.1:8000/types
+start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://127.0.0.1:8000/stock
 REM End of script
 echo Django development server is running and the page is opened in Chrome.
 pause

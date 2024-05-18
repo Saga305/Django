@@ -50,6 +50,63 @@ def types(request):
     }
     return render(request, "types.html", context)
 
+def stock(request):
+    stock_info : list[dict] = [
+        {
+            "name":"ONGC",
+            "market_price":279.00,
+            "quantity":104,
+            "buy_price":274.00,
+            "returns":+520.00,
+        },
+        {
+            "name":"Nippon India ETF Gold BeES",
+            "market_price":62.89,
+            "quantity":35,
+            "buy_price":61.16,
+            "returns":+60.55,
+        },
+        {
+            "name":"NIFTYBEES",
+            "market_price":249.05,
+            "quantity":2,
+            "buy_price":236.02,
+            "returns":+26.06,
+        },
+        {
+            "name":"LIQUIDCASE",
+            "market_price":102.26,
+            "quantity":8,
+            "buy_price":101.42,
+            "returns":+6.72,
+        },
+        {
+            "name":"JUNIORBEES",
+            "market_price":720.17,
+            "quantity":73,
+            "buy_price":692.85,
+            "returns":+1994.36,
+        },
+        {
+            "name":"IRFC",
+            "market_price":173.25,
+            "quantity":22,
+            "buy_price":157.00,
+            "returns":+357.50,
+        },
+        {
+            "name":"HDFC Bank",
+            "market_price":1466.05,
+            "quantity":9,
+            "buy_price":1594.75,
+            "returns":-1158.30,
+        },
+    ]
+    context = {
+        'stock': stock_info,
+    }
+    return render(request, "stock.html", context)
+
 
 def django_template_lang(request):
     data = {
@@ -71,4 +128,5 @@ urlpatterns = [
     path('login/', login),
     path('types/', types),
     path('django_template_lang/', django_template_lang),
+    path('stock/', stock),
 ]
