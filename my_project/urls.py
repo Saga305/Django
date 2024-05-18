@@ -37,6 +37,18 @@ def render_with_context(request):
 def stop_watch(request):
     return render(request, "stop_watch.html")
 
+def login(request):
+    return render(request, "login.html")
+
+def types(request):
+    context = {
+        'dictionary': {"name":"Ajay"},
+        'integer':555,
+        'lst':["The", "Great", "Saga"],
+        'tpl':("Apna", "time", "kab", "aayega!!!")
+    }
+    return render(request, "types.html", context)
+
 urlpatterns = [
     path('ring/', ring),
     path('rotate/', render_with_context),
@@ -44,4 +56,6 @@ urlpatterns = [
     path('ball/', ball),
     path('stop_watch/', stop_watch),
     path('bar/', bar),
+    path('login/', login),
+    path('types/', types),
 ]
