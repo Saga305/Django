@@ -24,15 +24,15 @@
       </tr>
     </thead>
     <tbody>
-        {% for si in stock %}
-            <tr>
-                {% for k,v in si.items %}
-                <td>
-                    {{v}}
-                </td>
-                {% endfor %}
-            </tr>
-        {% endfor%}
+      {% for si in stock %}
+        <tr>
+          {% for k,v in si.items %}
+          <td>
+            {{v}}
+          </td>
+          {% endfor %}
+        </tr>
+      {% endfor%}
     </tbody>
   </table>
 </div>

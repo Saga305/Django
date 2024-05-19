@@ -19,6 +19,7 @@ from django.urls import path
 from django.http import HttpResponse
 from django.shortcuts import render
 import random
+from naya_folder.dusra_folder.functions import django_template_lang
 
 def ring(request):
     return render(request, "ring.html")
@@ -108,15 +109,7 @@ def stock(request):
     return render(request, "stock.html", context)
 
 
-def django_template_lang(request):
-    data = {
-        'sachin': 101,
-        'rony':55,
-        'jadeja':25,
-        'dube':43
-    }
-    color = random.choice(["blue", "red", "black", "yellow", "green", "pink"])
-    return render(request, "django_template_lang.html",context={"data":data, "color":color})
+
 
 urlpatterns = [
     path('ring/', ring),

@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Django template Language</title>
-</head>
-<body>
-    {% for k,v in data.items %}
-        <h1 style="color:{{color}};"> {{k.title}} : {{v}} </h1>
-    {% endfor %}
-</body>
-</html>
+
+{% extends "base_generic.html" %}
+    {% block content %}
+        {% for k,v in data.items %}
+            <h1 style="color:{{color}};"> {{k.title}} : {{v}} </h1>
+        {% endfor %}
+    {% endblock %}
+
+
+    {% block new_content %}
+        <h1>Hello from new content</h1>
+    {% endblock %}
