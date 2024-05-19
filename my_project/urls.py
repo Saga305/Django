@@ -59,6 +59,7 @@ def stock(request):
             "quantity":104,
             "buy_price":274.00,
             "returns":+520.00,
+            "url": "https://groww.in/stocks/oil-natural-gas-corporation-ltd",
         },
         {
             "name":"Nippon India ETF Gold BeES",
@@ -66,6 +67,7 @@ def stock(request):
             "quantity":35,
             "buy_price":61.16,
             "returns":+60.55,
+            "url":"https://groww.in/etfs/reliance-etf-gold-bees",
         },
         {
             "name":"NIFTYBEES",
@@ -73,6 +75,7 @@ def stock(request):
             "quantity":2,
             "buy_price":236.02,
             "returns":+26.06,
+            "url":"https://groww.in/etfs/reliance-etf-nifty-bees",
         },
         {
             "name":"LIQUIDCASE",
@@ -80,6 +83,7 @@ def stock(request):
             "quantity":8,
             "buy_price":101.42,
             "returns":+6.72,
+            "url":"https://groww.in/etfs/zerodha-nifty-d-rate-liquid-etf",
         },
         {
             "name":"JUNIORBEES",
@@ -87,6 +91,7 @@ def stock(request):
             "quantity":73,
             "buy_price":692.85,
             "returns":+1994.36,
+            "url":"https://groww.in/etfs/reliance-etf-junior-bees",
         },
         {
             "name":"IRFC",
@@ -94,6 +99,7 @@ def stock(request):
             "quantity":22,
             "buy_price":157.00,
             "returns":+357.50,
+            "url":"https://groww.in/stocks/indian-railway-finance-corporation-ltd",
         },
         {
             "name":"HDFC Bank",
@@ -101,6 +107,7 @@ def stock(request):
             "quantity":9,
             "buy_price":1594.75,
             "returns":-1158.30,
+            "url":"https://groww.in/stocks/hdfc-bank-ltd",
         },
     ]
     context = {
