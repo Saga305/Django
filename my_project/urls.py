@@ -116,6 +116,17 @@ def stock(request):
     return render(request, "stock.html", context)
 
 
+def url_play(request):
+
+    print(request.GET)
+
+    e = request.GET.get("email")
+    context = {"name":None}
+    if e:
+        if e.startswith("a"):
+            context["name"] = e;
+
+    return render(request, "url_play.html", context=context)
 
 
 urlpatterns = [
@@ -129,4 +140,5 @@ urlpatterns = [
     path('types/', types),
     path('django_template_lang/', django_template_lang),
     path('stock/', stock),
+    path('url_play/', url_play),
 ]
